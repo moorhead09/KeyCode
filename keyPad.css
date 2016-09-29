@@ -1,0 +1,116 @@
+body{
+    background: black;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* ====== Password display ============*/
+
+section#pw_carousel > img{
+    border: none;
+    outline: none;    
+    margin: 0px 10px;
+    padding: 0px;
+}
+
+#dots{
+    width: 640px;
+    height: 160px;
+    background-image: url('images/pw_dots.png');
+    background-position-x: 0px;
+    background-position-y: -644px;
+}
+
+.image-container{
+    display: inline-block;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*======== Row One =========*/
+#zero{
+    opacity: 0;
+    position: absolute;
+    right: 490px;
+    top: 130px;
+}
+
+#one{
+    opacity: 0;
+    position: absolute;
+    right: 335px;
+    top: 130px;
+}
+
+#two{
+    opacity: 0;
+    position: absolute;
+    right: 185px;
+    top: 130px;
+}
+
+#three{
+    opacity: 0;
+    position: absolute;
+    right: 30px;
+    top: 130px;
+}
+
+/*======== Row Two =========*/
+#four{
+    opacity: 0;
+    position: absolute;
+    right: 490px;
+    top: 360px;
+}
+
+#five{
+    opacity: 0;
+    position: absolute;
+    right: 335px;
+    top: 360px;
+}
+
+#six{
+    opacity: 0;
+    position: absolute;
+    right: 185px;
+    top: 360px;
+}
+
+#seven{
+    opacity: 0;
+    position: absolute;
+    right: 30px;
+    top: 360px;
+}
+
+/*======== Row Three =========*/
+#eight{
+    opacity: 0;
+    position: absolute;
+    right: 490px;
+    top: 590px;
+}
+
+#nine{
+    opacity: 0;
+    position: absolute;
+    right: 335px;
+    top: 590px;
+}
+
+#reset{
+    opacity: 0;
+    position: absolute;
+    right: 185px;
+    top: 590px;
+}
+
+#enter{
+    opacity: 0;
+    position: absolute;
+    right: 30px;
+    top: 590px;
+}
