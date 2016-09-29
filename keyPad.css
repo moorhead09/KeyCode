@@ -114,3 +114,15 @@ section#pw_carousel > img{
     right: 30px;
     top: 590px;
 }
+
+@media (orientation: portrait){
+    @-ms-viewport{
+        width: devicewidth;
+    }
+}
+
+@media (orientation: landscape){
+    @-ms-viewport{
+        height: deviceheight;
+    }
+}
