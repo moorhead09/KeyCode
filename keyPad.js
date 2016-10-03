@@ -40,7 +40,7 @@ function setPWImage(count){
         break;
 
         case 3:
-        document.getElementById("dots").style.backgroundPositionY = "-321px";
+        document.getElementById("dots").style.backgroundPositionY = "-322px";
         break;
 
         case 4:
