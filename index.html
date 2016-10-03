@@ -16,16 +16,14 @@
         <link rel="icon" href="images/icon2_128.png" sizes="128x128">
 
         <!-- Modal Dialogue Boxes -->
-         <link rel="stylesheet" href="libs/remodal/remodal.css">
-         <link rel="stylesheet" href="libs/remodal/remodal-default-theme.css">
+         <link rel="stylesheet" href="../libs/remodal/remodal.css">
+         <link rel="stylesheet" href="../libs/remodal/remodal-default-theme.css">
 
     </head>
     <body>
         <section class="settings">
-            <!--<button data-remodal-target="modal">Show Dialog</button>-->
             <img data-remodal-target="modal" id="settings_button" src="images/settings.png" alt="Settings">
-            
-            <div class="remodal" data-remodal-id="modal">
+            <div class="remodal" data-remodal-id="modal" data-remodal-options="closeOnConfirm: false, closeOnOutsideClick: false">
                 <button data-remodal-action="close" class="remodal-close"></button>
                 <h1>Settings</h1>
                 <img src="images/leonardo.jpg" alt="Leonardo" />
@@ -49,6 +47,17 @@
                 <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
                 <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
             </div>
+
+            <div data-remodal-id="welcomeMatt">
+                <button data-remodal-action="close" class="remodal-close"></button>
+                <h2>Welcome Home Matt!</h2>
+            </div>            
+            <div data-remodal-id="welcomeAleks">
+                <button data-remodal-action="close" class="remodal-close"></button>
+                <h2>Welcome Home Aleks!</h2>
+            </div>
+            
+
         </section>
         <section id="pw_carousel">
             <img id="dots" src="images/blank_dots.png">
@@ -79,6 +88,7 @@
             </section>
         </div>
         <script type="text/javascript" src="keyPad.js"></script>
-        <script src="libs/remodal/remodal.js"></script>
+        <script src="../libs/remodal/remodal.js"></script>
+        
     </body>
 </html>

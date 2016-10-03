@@ -5,6 +5,7 @@ var aleksPW = [0, 1, 2, 3];
 var mattPW = [1, 1, 2, 3];
 var settingsWindow;
 
+
 function getFigures(){
     var figs;
     figs = document.getElementById("pw_carousel").getElementsByTagName('img');
@@ -81,10 +82,12 @@ function checkPW(){
             }
         }
         if(aCount == 4){
-            alert("Welcome Home Aleks");
+            /*alert("Welcome Home Aleks");*/
+            $('[data-remodal-id=welcomeAleks]').remodal().open();
         }
         else if(mCount == 4){
-            alert("Welcome Home Matt");
+            /*alert("Welcome Home Matt");*/
+            $('[data-remodal-id=welcomeMatt]').remodal().open();
         }
         else{
             alert("Password Incorrect!");

@@ -18,6 +18,14 @@ body{
     margin: 0px 0px 0px 590px;
 }
 
+section.aleksGone {
+    display: none;
+}
+
+section.aleksHome {
+    display: block;
+}
+
 /* ====== Password display ============*/
 
 section#pw_carousel > img{
