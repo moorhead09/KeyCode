@@ -1,7 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
     <head>
         <title>KeyCode</title>
+        <script   src="https://code.jquery.com/jquery-3.1.0.min.js" 
+         integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" 
+         crossorigin="anonymous"></script>
+
         <meta name="mobile-web-app-capable" content="yes">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=0.55">
@@ -11,10 +15,40 @@
         <link rel="icon" href="images/icon2_192.png" sizes="192x192">
         <link rel="icon" href="images/icon2_128.png" sizes="128x128">
 
+        <!-- Modal Dialogue Boxes -->
+         <link rel="stylesheet" href="../libs/remodal/remodal.css">
+         <link rel="stylesheet" href="../libs/remodal/remodal-default-theme.css">
+
     </head>
     <body>
         <section class="settings">
-            <img onclick="openSettings()" id="settings_button" src="images/settings.png" alt="Settings">
+            <!--<button data-remodal-target="modal">Show Dialog</button>-->
+            <img data-remodal-target="modal" id="settings_button" src="images/settings.png" alt="Settings">
+            
+            <div class="remodal" data-remodal-id="modal">
+                <button data-remodal-action="close" class="remodal-close"></button>
+                <h1>Settings</h1>
+                <img src="images/leonardo.jpg" alt="Leonardo" />
+                <p>
+                    Here is an arbitrary picture of Ninja Da Vinci
+                </p>
+                <form>
+                    <fieldset>
+                        <legend>Set Password</legend>
+                        Name: 
+                        <select name="firstName" placeholder="Select User">
+                            <option value="aleks">Aleks</option>
+                            <option value="matt">Matt</option>
+                        </select></br></br>
+                        New Pin: <input name="newPin" type="password" placeholder="Enter your new pin" /></br>
+                        Confirm New Pin: <input name="conf_newPin" type="password" required placeholder="Enter your new pin again" /></br></br>
+                        Old Pin: <input name="pin" type="password" placeholder="Enter your old pin" />
+                    </fieldset>
+                </form>
+                <br>
+                <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
+                <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
+            </div>
         </section>
         <section id="pw_carousel">
             <img id="dots" src="images/blank_dots.png">
@@ -45,5 +79,6 @@
             </section>
         </div>
         <script type="text/javascript" src="keyPad.js"></script>
+        <script src="../libs/remodal/remodal.js"></script>
     </body>
 </html>

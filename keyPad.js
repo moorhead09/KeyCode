@@ -3,6 +3,7 @@ var pwCount = 0;
 var passWord = [];
 var aleksPW = [0, 1, 2, 3];
 var mattPW = [1, 1, 2, 3];
+var settingsWindow;
 
 function getFigures(){
     var figs;
@@ -79,8 +80,11 @@ function checkPW(){
                 mCount++;
             }
         }
-        if(aCount == 4 || mCount == 4){
-            alert("Success");
+        if(aCount == 4){
+            alert("Welcome Home Aleks");
+        }
+        else if(mCount == 4){
+            alert("Welcome Home Matt");
         }
         else{
             alert("Password Incorrect!");
@@ -93,4 +97,18 @@ function checkPW(){
     setPWImage(pwCount);
 }
 
+$(document).on('confirmation', '.remodal', function () {
+    console.log('Confirmation button is clicked');
+    alert('Confirmation button is clicked');
+    settings = {
+        closeOnConfirm: false,
+        closeOnEscape: false,
+        closeOnOutsideClick: false
+    };
+  
+});
+
+function openSettings(){
+    settingsWindow = window.open("settings.html");
+}
 setPWImage(pwCount);
