@@ -92,7 +92,7 @@ function loadPW(){
         if(this.readyState == 4 && this.status == 200){
             var xmlDoc = this.responseXML;
             var txt = "";
-            x = xmlDoc.getElementsByTagName("p").getElementById("alekspw");
+            var x = xmlDoc.getElementsByTagName("p").getElementById("alekspw");
             for(var i = 0; i < x.length; i++){
                 txt += x[i].childNodes[0].nodeValue + "<br>";
             }
