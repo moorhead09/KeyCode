@@ -87,12 +87,15 @@ function checkPW(pw){
 }
 
 function loadPW(){
+    var xmlDoc;
+    var x;
+    var txt;
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
-            var xmlDoc = xhttp.responseXML;
-            var txt = "";
-            var x = xmlDoc.getElementsByTagName("p").getElementById("alekspw");
+            xmlDoc = xhttp.responseXML;
+            txt = "";
+            x = xmlDoc.getElementsByTagName("p").getElementById("alekspw");
             for(var i = 0; i < x.length; i++){
                 txt += x[i].childNodes[0].nodeValue + "<br>";
             }
