@@ -90,7 +90,16 @@ function loadPW(){
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
-            console.log("Returned: " + this.responseText);
+            var xmlDoc = this.responseXML;
+            var txt = "";
+            x = xmlDoc.getElementsByTagName("aleksPW");
+            for(var i = 0; i < x.length; i++){
+                txt += x[i].childNodes[0].nodeValue + "<br>";
+            }
+            console.log("Returned: " + txt);
+            /*
+            var response = this.responseText;
+            console.log("Returned: " + response);*/
         }
     };
     xhttp.open("GET", "stuff.txt", true);

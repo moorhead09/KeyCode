@@ -1,2 +1,1 @@
-aleksPW = [0, 0, 0, 0];
-mattPW = [1, 1, 1, 1];
+<aleksPW>0000</aleksPW><mattPW>1111</mattPW>
