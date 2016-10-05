@@ -17,13 +17,26 @@ body{
     height: 50px;
     margin: 0px 0px 0px 590px;
 }
+/* ====== Modal ====== */
 
-section.aleksGone {
-    display: none;
+section#pwNotices{
+    margin: 10px;
 }
 
-section.aleksHome {
-    display: block;
+section#welcomeMatt{
+    background-color: deepskyblue !important;
+}
+section#welcomeAleks{
+    background-color: hotpink !important;
+}
+section#pwResetSuccessful{
+    background-color: green !important;
+}
+section#pwResetFailed{
+    background-color: red !important;
+}
+section#pwDontMatch{
+    background-color: grey !important;
 }
 
 /* ====== Password display ============*/

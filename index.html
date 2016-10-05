@@ -21,53 +21,94 @@
 
     </head>
     <body>
+        <!-- Set up initial password -->
+        <div class="remodal" data-remodal-id="initializePW" data-remodal-options="closeOnConfirm: false, closeOnOutsideClick: false">
+            <button data-remodal-action="close" class="remodal-close"></button>
+            <h1>Set Your Pin</h1>
+            <h2>You can change this later.</h2>
+            <!--<img src="images/leonardo.jpg" alt="Leonardo" />
+            <p>
+                Here is an arbitrary picture of Ninja Da Vinci
+            </p>-->
+            <form>
+                <!--<fieldset> -->
+                    <!--<legend>Set Password</legend>-->
+                    <h2>Name: 
+                    <select name="firstName" placeholder="Select User" style="font-size:1.0em">
+                        <option value="aleks">Aleks</option>
+                        <option value="matt">Matt</option>
+                    </select></h2></br>
+                    <h2>New Pin: <input name="newPin" type="password" maxlength="4" size="9" style="font-size:1.0em" required placeholder="Enter New Pin" /></h2>
+                    <h2>Confirm New Pin: <input name="conf_newPin" type="password" maxlength="4" size="9" style="font-size:1.0em" placeholder="New Pin Again" /></h2></br>
+                    <h2>Old Pin: <input name="pin" type="password" maxlength="4" size="8" style="font-size:1.0em" placeholder="Enter Old Pin" /></h2>
+                    <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
+                <input type="submit" data-remodal-action="confirm" class="remodal-confirm" />
+                <!--</fieldset>-->
+            </form>
+            <br>
+        </div>
+
+        <!-- Button and Modal for settings -->
         <section class="settings">
             <img data-remodal-target="modal" id="settings_button" src="images/settings.png" alt="Settings">
             <div class="remodal" data-remodal-id="modal" data-remodal-options="closeOnConfirm: false, closeOnOutsideClick: false">
                 <button data-remodal-action="close" class="remodal-close"></button>
-                <h1>Settings</h1>
-                <img src="images/leonardo.jpg" alt="Leonardo" />
+                <h1>Change Password</h1>
+                <!--<img src="images/leonardo.jpg" alt="Leonardo" />
                 <p>
                     Here is an arbitrary picture of Ninja Da Vinci
-                </p>
+                </p>-->
                 <form>
-                    <fieldset>
-                        <legend>Set Password</legend>
+                    <!--<fieldset> -->
+                        <!--<legend>Set Password</legend>-->
                         <h2>Name: 
-                        <select name="firstName" placeholder="Select User">
+                        <select name="firstName" placeholder="Select User" style="font-size:1.0em">
                             <option value="aleks">Aleks</option>
                             <option value="matt">Matt</option>
                         </select></h2></br>
-                        <h2>New Pin: <input name="newPin" type="password" placeholder="Enter your new pin" /></h2>
-                        <h2>Confirm New Pin: <input name="conf_newPin" type="password" required placeholder="Enter your new pin again" /></h2></br>
-                        <h2>Old Pin: <input name="pin" type="password" placeholder="Enter your old pin" /></h2>
-                    </fieldset>
+                        <h2>New Pin: <input name="newPin" type="password" maxlength="4" size="9" style="font-size:1.0em" required placeholder="Enter New Pin" /></h2>
+                        <h2>Confirm New Pin: <input name="conf_newPin" type="password" maxlength="4" size="9" style="font-size:1.0em" placeholder="New Pin Again" /></h2></br>
+                        <h2>Old Pin: <input name="pin" type="password" maxlength="4" size="8" style="font-size:1.0em" placeholder="Enter Old Pin" /></h2>
+                        <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
+                        <input type="submit" data-remodal-action="confirm" class="remodal-confirm" />
+                    <!--</fieldset>-->
                 </form>
                 <br>
-                <button data-remodal-action="cancel" class="remodal-cancel">Cancel</button>
-                <button data-remodal-action="confirm" class="remodal-confirm">OK</button>
             </div>
 
-            <div data-remodal-id="welcomeMatt">
-                <button data-remodal-action="close" class="remodal-close"></button>
-                <h2>Welcome Home Matt!</h2>
-            </div>            
-            <div data-remodal-id="welcomeAleks">
-                <button data-remodal-action="close" class="remodal-close"></button>
-                <h2>Welcome Home Aleks!</h2>
-            </div>
+            <section id="pwNotices">
+                <div data-remodal-id="welcomeMatt" id="welcomeMatt">
+                    <button data-remodal-action="close" class="remodal-close"></button>
+                    <h2>Welcome Home Matt!</h2>
+                </div>            
+                <div data-remodal-id="welcomeAleks" id="welcomeAleks">
+                    <button data-remodal-action="close" class="remodal-close"></button>
+                    <h2>Welcome Home Aleks!</h2>
+                </div>
+
+                <div data-remodal-id="pwResetSuccessful" id="pwResetSuccessful">
+                    <button data-remodal-action="close" class="remodal-close"></button>
+                    <h2>Success!</h2>
+                </div>
+                <div data-remodal-id="pwResetFailed" id="pwResetFailed">
+                    <button data-remodal-action="close" class="remodal-close"></button>
+                    <h2>Check User and Password!</h2>
+                </div>
+                <div data-remodal-id="pwDontMatch" id="pwDontMatch">
+                    <button data-remodal-action="close" class="remodal-close"></button>
+                    <h2>Passwords Don't Match!</h2>
+                </div>
+            </section>
             
-
         </section>
+
+
+        <!-- Password Imagery -->
         <section id="pw_carousel">
             <img id="dots" src="images/blank_dots.png">
-            <!--
-            <img id="zero_dot" class="visible" src="images/pw_dots.png">
-            <img id="one_dot" alt="">
-            <img id="two_dot" alt="">         
-            <img id="three_dot" alt="">
-            <img id="four_dot" alt="">-->
         </section>
+
+        <!-- Kaypad -->
         <div class="image-container">
             <img src="images/keyPad.png" alt="">
             <section id="pw_num">
@@ -84,7 +125,7 @@
                 <img onclick="handleClick(8)" id="eight" src="images/button_blue.png" alt="oops">
                 <img onclick="handleClick(9)" id="nine" src="images/button_blue.png" alt="oops">
                 <img onclick="resetPW()" id="reset" src="images/button_blue.png" alt="oops">
-                <img onclick="checkPW()" id="enter" src="images/button_blue.png" alt="oops">
+                <img onclick="submitPW()" id="enter" src="images/button_blue.png" alt="oops">
             </section>
         </div>
         <script type="text/javascript" src="keyPad.js"></script>
