@@ -93,7 +93,7 @@ function loadPW(){
             consol.log("Returned: " + this.responseText);
         }
     };
-    xhttp.open("GET", "libs/stuff.txt", true);
+    xhttp.open("GET", "stuff.txt", true);
     xhttp.send();
 }
 
