@@ -87,28 +87,28 @@ function checkPW(pw){
 }
 
 function loadPW(){
-    var pw = $.load("stuff.txt #alekspw");
-    /*
+    
     var xmlDoc;
     var x;
     var txt;
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function(){
         if(this.readyState == 4 && this.status == 200){
-            xmlDoc = xhttp.responseXML;
+            //xmlDoc = xhttp.responseText;
+            /*
             txt = "";
             x = xmlDoc.getElementsByTagName("p").getElementById("alekspw");
             for(var i = 0; i < x.length; i++){
                 txt += x[i].childNodes[0].nodeValue + "<br>";
             }
             console.log("Returned: " + txt);
-            /*
+            */
             var response = this.responseText;
             console.log("Returned: " + response);
         }
     };
     xhttp.open("GET", "stuff.txt", true);
-    xhttp.send();*/
+    xhttp.send();
 }
 
 function submitPW(){
