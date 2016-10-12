@@ -87,6 +87,8 @@ function checkPW(pw){
 }
 
 function loadPW(){
+    var pw = $.load("stuff.txt #alekspw");
+    /*
     var xmlDoc;
     var x;
     var txt;
@@ -102,11 +104,11 @@ function loadPW(){
             console.log("Returned: " + txt);
             /*
             var response = this.responseText;
-            console.log("Returned: " + response);*/
+            console.log("Returned: " + response);
         }
     };
     xhttp.open("GET", "stuff.txt", true);
-    xhttp.send();
+    xhttp.send();*/
 }
 
 function submitPW(){
